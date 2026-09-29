@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import logo from '@/assets/logo.png.asset.json';
+import { FadeIn } from '@/components/FadeIn';
 
 const navigation = [
   { label: 'Home', to: '/' },
@@ -45,5 +46,5 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
 }
 
 export function PageIntro({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
-  return <section className="bg-primary px-5 py-16 text-primary-foreground sm:px-8 sm:py-20 lg:px-10 lg:py-24"><div className="mx-auto max-w-7xl"><p className="section-label text-brand-gold">{eyebrow}</p><h1 className="mt-5 max-w-4xl font-display text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">{title}</h1>{description && <p className="mt-6 max-w-2xl text-base leading-8 text-primary-foreground/75 sm:text-lg">{description}</p>}</div></section>;
+  return <section className="bg-primary px-5 py-16 text-primary-foreground sm:px-8 sm:py-20 lg:px-10 lg:py-24"><FadeIn className="mx-auto max-w-7xl"><p className="section-label text-brand-gold">{eyebrow}</p><h1 className="mt-5 max-w-4xl font-display text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">{title}</h1>{description && <p className="mt-6 max-w-2xl text-base leading-8 text-primary-foreground/75 sm:text-lg">{description}</p>}</FadeIn></section>;
 }
